@@ -1,0 +1,8 @@
+L=int(input())
+D=int(input())
+X=int(input())
+r=range(L,D+1)
+z=zip(r,[sum(int(j) for j in str(i)) for i in r])
+z2=zip(r,[sum(int(j) for j in str(i)) for i in r])
+print(min(z,key=lambda x: x[0] if x[1]==X else 10000)[0])
+print(max(z2,key=lambda x: x[0] if x[1]==X else -1)[0])
